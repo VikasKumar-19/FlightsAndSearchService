@@ -102,7 +102,6 @@ const getAll = async (req, res) => {
 
 const createAll = async (req, res) => {
   try {
-    console.log(req.body);
     const cities = await airportService.createAllAirports(req.body);
     return res.status(201).json({
       data: cities,
