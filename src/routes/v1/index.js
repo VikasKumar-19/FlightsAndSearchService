@@ -4,6 +4,7 @@ const router = express.Router();
 
 const CityControllers = require("../../controllers/city-controller");
 const AirportControllers = require("../../controllers/airport-controller");
+const FlightController = require("../../controllers/flight-controller");
 
 //city routes
 router.post("/city", CityControllers.create);
@@ -18,5 +19,8 @@ router.post("/airport", AirportControllers.create);
 router.delete("/airport/:id", AirportControllers.destroy);
 router.get("/airport/:id", AirportControllers.read);
 router.patch("/airport/:id", AirportControllers.update);
+
+//flight routes
+router.post("/flights", FlightController.create);
 
 module.exports = router;
